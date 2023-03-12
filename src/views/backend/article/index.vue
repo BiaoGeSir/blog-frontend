@@ -66,7 +66,7 @@ export default defineComponent({
         // 分页查询
         const handleGetArticles = async () => {
             const res = await articleService.pageAdmin({
-                pageNo: pagination.current,
+                page: pagination.current,
                 pageSize: pagination.pageSize,
             });
             articleList.value = res.data;

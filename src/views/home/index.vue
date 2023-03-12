@@ -12,7 +12,7 @@
 
                 <a-pagination
                     class="pagination-common"
-                    v-model:current="pageInfo.pageNo"
+                    v-model:current="pageInfo.page"
                     v-model:pageSize="pageInfo.pageSize"
                     :total="total"
                     show-less-items
@@ -52,7 +52,7 @@ export default defineComponent({
         const articleList = ref<ArticleDTO[]>([]);
 
         const pageInfo = reactive({
-            pageNo: 1,
+            page: 1,
             pageSize: 6,
         });
 
@@ -76,13 +76,13 @@ export default defineComponent({
         watch(
             () => route.query,
             (val: LocationQuery, oldVal) => {
-                const { pageNo } = val;
-                if (pageNo) {
-                    pageInfo.pageNo = Number(pageNo);
+                const { page } = val;
+                if (page) {
+                    pageInfo.page = Number(page);
                 } else {
-                    pageInfo.pageNo = 1;
+                    pageInfo.page = 1;
                 }
-                const isChangePage = pageNo !== oldVal?.pageNo;
+                const isChangePage = page !== oldVal?.page;
                 getPageList(isChangePage);
             },
             {
@@ -92,7 +92,7 @@ export default defineComponent({
 
         // 分页改变
         const onPageNoChange = (page: number) => {
-            router.push({ query: { pageNo: String(page) } });
+            router.push({ query: { page: String(page) } });
         };
 
         return {

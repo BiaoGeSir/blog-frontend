@@ -14,7 +14,7 @@ const theme = require("./antd-theme.js");
 module.exports = {
     publicPath: "/",
     devServer: {
-        port: 3000,
+        port: 8080,
         open: true,
         proxy: {
             "/api": {

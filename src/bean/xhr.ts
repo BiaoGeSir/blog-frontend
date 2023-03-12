@@ -7,7 +7,7 @@ import { RecordDTO } from "./dto";
 
 // 条件Model
 export interface QueryPageModel extends PlainObject {
-    pageNo: number;
+    page: number;
     pageSize: number;
 }
 

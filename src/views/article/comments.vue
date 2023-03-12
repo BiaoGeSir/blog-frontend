@@ -106,7 +106,7 @@ export default defineComponent({
         const isAllLoaded = computed(() => total.value > 0 && total.value === comments.value.length);
 
         const pageInfo = reactive({
-            pageNo: 1,
+            page: 1,
             pageSize: 6,
         });
 
@@ -131,7 +131,7 @@ export default defineComponent({
         // 加载更多
         const loadMore = () => {
             if (!isFetchLoading.value && comments.value.length < total.value) {
-                pageInfo.pageNo++;
+                pageInfo.page++;
                 getComments(true);
             }
         };

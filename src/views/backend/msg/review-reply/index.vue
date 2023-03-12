@@ -44,7 +44,7 @@ export default defineComponent({
         const handleGetReplys = async () => {
             const res = await replyService.unreviewdReplyPage({
                 type: 2, // 2代表留言
-                pageNo: pagination.current,
+                page: pagination.current,
                 pageSize: pagination.pageSize,
             });
             replyList.value = res.data;

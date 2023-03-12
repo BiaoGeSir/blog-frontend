@@ -54,7 +54,7 @@ export default defineComponent({
         // 分页查询
         const handleGetComments = async () => {
             const res = await commentService.pageAdmin({
-                pageNo: pagination.current,
+                page: pagination.current,
                 pageSize: pagination.pageSize,
                 type: 1, // 1代表是文章评论
             });

@@ -60,7 +60,7 @@ export default defineComponent({
         const articleList = ref<ArticleDTO[]>([]);
 
         const pageInfo = reactive({
-            pageNo: 1,
+            page: 1,
             pageSize: 6,
         });
 
@@ -89,7 +89,7 @@ export default defineComponent({
         // 分页改变
         const loadMore = () => {
             if (articleList.value.length < total.value) {
-                pageInfo.pageNo++;
+                pageInfo.page++;
                 getPageList(true);
             }
         };

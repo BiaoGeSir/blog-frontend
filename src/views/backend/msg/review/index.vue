@@ -52,7 +52,7 @@ export default defineComponent({
         const handleGetMessages = async () => {
             const res = await commentService.pageNotApproved({
                 type: 2, // 2代表留言
-                pageNo: pagination.current,
+                page: pagination.current,
                 pageSize: pagination.pageSize,
             });
             messageList.value = res.data;

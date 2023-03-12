@@ -158,7 +158,7 @@
                                             switch ((n.prev = n.next)) {
                                                 case 0:
                                                     return (
-                                                        (n.next = 2), m["a"].pageAdmin({ pageNo: t.current, pageSize: t.pageSize, type: 1 })
+                                                        (n.next = 2), m["a"].pageAdmin({ page: t.current, pageSize: t.pageSize, type: 1 })
                                                     );
                                                 case 2:
                                                     (a = n.sent), (e.value = a.data), (t.total = a.total);

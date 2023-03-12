@@ -53,7 +53,7 @@ export default defineComponent({
         // 分页查询
         const handleGetMessages = async () => {
             const res = await commentService.pageAdmin({
-                pageNo: pagination.current,
+                page: pagination.current,
                 pageSize: pagination.pageSize,
                 type: 2, // 2代表是留言
             });

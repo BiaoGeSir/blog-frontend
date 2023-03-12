@@ -53,7 +53,7 @@ export default defineComponent({
         const handleGetComments = async () => {
             const res = await commentService.pageNotApproved({
                 type: 1, // 1代表评论
-                pageNo: pagination.current,
+                page: pagination.current,
                 pageSize: pagination.pageSize,
             });
             commentList.value = res.data;
