@@ -8,7 +8,7 @@
             <a-skeleton :loading="loading" active avatar :paragraph="{ rows: 20 }">
                 <article v-if="article">
                     <header class="article__header">
-                        <img class="avatar" src="@/assets/img/avatar.jpg" />
+                        <img class="avatar" src="@/assets/img/avatar.jpeg" />
                         <div class="article__infos">
                             <span class="author">Tusi</span>
                             <sup class="role-tag">博主</sup>

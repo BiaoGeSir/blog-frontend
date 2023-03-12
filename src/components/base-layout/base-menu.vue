@@ -5,9 +5,9 @@
                 <h2>Tusi博客</h2>
                 <div class="avatar-wrap">
                     <div class="avatar-mask"></div>
-                    <img class="avatar" src="@/assets/img/avatar.jpg" />
+                    <img class="avatar" src="@/assets/img/avatar.jpeg" />
                 </div>
-                <div class="location"><icon-svg icon="location" />湖南长沙</div>
+                <div class="location"><icon-svg icon="location" />湖北武汉</div>
                 <a-row class="social-list">
                     <a-col :span="8">
                         <a
